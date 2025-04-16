@@ -209,7 +209,7 @@ const HeroSection: React.FC = () => {
 
       {/* Hero Title in Bottom-Left with Typewriter Effect */}
       <div className="absolute bottom-8 left-8 z-10">
-        <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-roboto font-extrabold tracking-wider typewriter">
+        <h1 className="text-white text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-roboto font-extrabold tracking-wider typewriter">
           {currentText}
         </h1>
       </div>
