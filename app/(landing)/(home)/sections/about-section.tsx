@@ -256,7 +256,6 @@ const LatestMasterpieces: React.FC = () => {
       prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1,
     );
   };
-
   // Add this style to the modal container to prevent page scroll:
   useEffect(() => {
     if (isModalOpen) {
