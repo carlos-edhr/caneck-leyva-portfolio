@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { navLinks } from "../secondary/constants";
+import Image from "next/image";
 
 const Navbar = () => {
   // track if the user has scrolled down the page
@@ -25,12 +26,17 @@ const Navbar = () => {
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
-        <a href="#hero" className="logo">
-          Adrian JSM
+        <a href="#hero" className="logo ">
+          <Image
+            src="/logos/logo2.png" // Replace with your logo path
+            alt="Logo"
+            width={150} // Adjust width as needed
+            height={50} // Adjust height as needed
+          />
         </a>
 
         <nav className="desktop">
-          <ul>
+          <ul className="uppercase ">
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group">
                 <a href={link}>
@@ -43,9 +49,9 @@ const Navbar = () => {
         </nav>
 
         <a href="#contact" className="contact-btn group">
-          <div className="inner">
+          {/* <div className="inner">
             <span>Contact me</span>
-          </div>
+          </div> */}
         </a>
       </div>
     </header>

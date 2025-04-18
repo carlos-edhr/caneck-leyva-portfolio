@@ -34,16 +34,15 @@ const images = [
 
 // Define an array of hero titles
 const titles = [
-  "De la ingeniería a la Fotografía",
-  "Astrofotografía",
-  "Retratos",
-  "Fotografía de Productos",
-  "Instructor universitario",
-  "Contando historias con Luz",
-  "Fotografía de Viajes",
-  "Fotografía de Eventos",
-  "Retratando la esencia humana y cósmica",
-  "Capturando Momentos",
+  "From Engineering to Photography",
+  "Astrophotography",
+  "Portraits",
+  "Pedagogy",
+  "Nature",
+  "Events",
+  "Landscapes",
+  "Architecture",
+  "Marketing",
 ];
 
 const HeroSection: React.FC = () => {
@@ -176,9 +175,9 @@ const HeroSection: React.FC = () => {
 
       {/* Navigation Bar */}
       <nav className="absolute top-0 w-full flex justify-between items-center p-6 z-10">
-        <h1 className="font-roboto text-white text-4xl font-bold">
+        {/* <h1 className="font-roboto text-white text-4xl font-bold">
           Caneck Leyva
-        </h1>
+        </h1> */}
         <ul className="flex space-x-8">
           <li>
             <a

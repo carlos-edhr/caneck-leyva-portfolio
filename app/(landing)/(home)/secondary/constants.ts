@@ -1,19 +1,21 @@
+import { link } from "fs";
+
 const navLinks = [
   {
-    name: "Work",
+    name: "The Work",
     link: "#work",
   },
   {
-    name: "Experience",
-    link: "#experience",
+    name: "The Gallery",
+    link: "#gallery",
   },
   {
-    name: "Skills",
-    link: "#skills",
+    name: "The Artist",
+    link: "#artist",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "The Projects",
+    link: "#projects",
   },
 ];
 
@@ -251,18 +253,22 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
+    link: "https://www.instagram.com/kaneleyva/",
   },
   {
     name: "fb",
     imgPath: "/images/fb.png",
+    link: "https://www.facebook.com/caneckleyva/",
   },
   {
     name: "x",
     imgPath: "/images/x.png",
+    link: "/",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    link: "https://mx.linkedin.com/in/caneckleyva",
   },
 ];
 
