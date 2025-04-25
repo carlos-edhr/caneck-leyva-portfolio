@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { GalleryImageView } from "./gallery-image-view";
 
 type GalleryCategory =
   | "astrophotography"
@@ -31,6 +32,7 @@ const GallerySection: React.FC = () => {
   const [activeCategory, setActiveCategory] =
     useState<GalleryCategory>("astrophotography");
   const [galleryItems, setGalleryItems] = useState<GalleryItem[]>([]);
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   // Sample data - replace with your actual images
   useEffect(() => {
@@ -112,69 +114,78 @@ const GallerySection: React.FC = () => {
       id="gallery"
       className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8"
     >
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-roboto font-light tracking-wider text-gray-800 mb-2">
-            Caneck Leyva's Fine Art Photography
-          </h2>
-          <div className="w-24 h-0.5 bg-gray-300 mx-auto mb-4"></div>
-          <h3 className="text-4xl font-roboto font-light text-gray-900 uppercase tracking-wider">
-            The Gallery
-          </h3>
-        </div>
-
-        {/* Category Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {[
-            { id: "astrophotography", label: "Astrophotography" },
-            { id: "portraits", label: "Portraits" },
-            { id: "landscapes", label: "Landscapes" },
-            { id: "marketing", label: "Marketing" },
-            { id: "artistic", label: "Artistic" },
-            { id: "teaching", label: "Teaching" },
-          ].map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id as GalleryCategory)}
-              className={`px-4 py-2 text-sm uppercase tracking-wider transition-colors ${
-                activeCategory === category.id
-                  ? "text-gray-900 border-b-2 border-gray-900"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-            >
-              <div className="relative aspect-square bg-gray-100">
-                <Image
-                  src={item.imageUrl}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  placeholder="blur"
-                  blurDataURL="data:image/png;base64,..."
-                />
-              </div>
-              <div className="p-4 bg-white">
-                <p className="font-light text-lg text-gray-700">
-                  {item.title}, {item.year}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-roboto font-light tracking-wider text-gray-800 mb-2">
+          Caneck Leyva's Fine Art Photography
+        </h2>
+        <div className="w-24 h-0.5 bg-gray-300 mx-auto mb-4"></div>
+        <h3 className="text-4xl font-roboto font-light text-gray-900 uppercase tracking-wider">
+          The Gallery
+        </h3>
       </div>
+      {selectedItem ? (
+        <GalleryImageView
+          item={selectedItem}
+          onClose={() => setSelectedItem(null)}
+        />
+      ) : (
+        <div className="max-w-7xl mx-auto">
+          {/* Category Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {[
+              { id: "astrophotography", label: "Astrophotography" },
+              { id: "portraits", label: "Portraits" },
+              { id: "landscapes", label: "Landscapes" },
+              { id: "marketing", label: "Marketing" },
+              { id: "artistic", label: "Artistic" },
+              { id: "teaching", label: "Teaching" },
+            ].map((category) => (
+              <button
+                key={category.id}
+                onClick={() =>
+                  setActiveCategory(category.id as GalleryCategory)
+                }
+                className={`px-4 py-2 text-sm uppercase tracking-wider transition-colors ${
+                  activeCategory === category.id
+                    ? "text-gray-900 border-b-2 border-gray-900"
+                    : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredItems.map((item) => (
+              <div
+                key={item.id}
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+                onClick={() => setSelectedItem(item)}
+              >
+                <div className="relative aspect-square bg-gray-100">
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,..."
+                  />
+                </div>
+                <div className="p-4 bg-white">
+                  <p className="font-light text-lg text-gray-700">
+                    {item.title}, {item.year}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

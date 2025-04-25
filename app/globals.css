@@ -665,3 +665,22 @@ section {
 [data-state="active"] {
   animation: fadeIn 300ms ease-out;
 }
+
+.gallery-image-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.gallery-image-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 300ms ease-out;
+}
+.gallery-image-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery-image-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 300ms ease-in;
+}
