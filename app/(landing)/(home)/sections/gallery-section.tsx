@@ -113,9 +113,16 @@ const GallerySection: React.FC = () => {
       className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-light text-gray-900 mb-12 text-center">
-          Gallery
-        </h1>
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-roboto font-light tracking-wider text-gray-800 mb-2">
+            Caneck Leyva's Fine Art Photography
+          </h2>
+          <div className="w-24 h-0.5 bg-gray-300 mx-auto mb-4"></div>
+          <h3 className="text-4xl font-roboto font-light text-gray-900 uppercase tracking-wider">
+            The Gallery
+          </h3>
+        </div>
 
         {/* Category Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
