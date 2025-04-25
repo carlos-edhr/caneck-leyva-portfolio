@@ -267,15 +267,15 @@ const LatestMasterpieces: React.FC = () => {
 
   return (
     <>
-      <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <section id="work" className="bg-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-light tracking-wider text-gray-800 mb-2">
-              Caneck Leyva Fine Art Photography
+            <h2 className="text-3xl font-roboto font-light tracking-wider text-gray-800 mb-2">
+              Caneck Leyva's Fine Art Photography
             </h2>
             <div className="w-24 h-0.5 bg-gray-300 mx-auto mb-4"></div>
-            <h3 className="text-4xl font-light text-gray-900 uppercase tracking-wider">
+            <h3 className="text-4xl font-roboto  font-light text-gray-900 uppercase tracking-wider">
               Latest Work
             </h3>
           </div>

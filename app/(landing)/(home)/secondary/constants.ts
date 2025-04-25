@@ -260,11 +260,7 @@ const socialImgs = [
     imgPath: "/images/fb.png",
     link: "https://www.facebook.com/caneckleyva/",
   },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
-    link: "/",
-  },
+
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",

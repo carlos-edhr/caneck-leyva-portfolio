@@ -1,7 +1,12 @@
+import { Camera } from "lucide-react";
 import AboutSection from "./sections/about-section";
+import { ArtistSection } from "./sections/artist-section";
 import Footer from "./sections/footer";
+import GallerySection from "./sections/gallery-section";
 import HeroSection from "./sections/hero";
 import Navbar from "./sections/navbar";
+import CameraSection from "./sections/camera-section";
+import ProjectsSection from "./sections/projects-section";
 
 export default function Home() {
   return (
@@ -10,6 +15,10 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <GallerySection />
+      <ArtistSection />
+      <CameraSection />
+      <ProjectsSection />
       <Footer />
     </div>
   );

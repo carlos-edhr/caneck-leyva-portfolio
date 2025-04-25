@@ -604,3 +604,64 @@ section {
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom scrollbar for desktop */
+.simplebar-scrollbar::before {
+  background-color: #333;
+  opacity: 0.5;
+}
+
+/* Hide native scrollbar */
+[data-scroll-container] {
+  scrollbar-width: none;
+}
+[data-scroll-container]::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar */
+[data-scroll-container] {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+[data-scroll-container]::-webkit-scrollbar {
+  display: none;
+}
+
+/* Better image transitions */
+[data-scroll] {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hide scrollbars */
+[data-scroll-container] {
+  scrollbar-width: none;
+}
+[data-scroll-container]::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth image scaling */
+.image-zoom {
+  transition: transform 0.3s ease-out;
+}
+.image-zoom:hover {
+  transform: scale(1.03);
+}
+
+[data-scroll-container] {
+  overflow-x: visible !important;
+  width: max-content;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+[data-state="active"] {
+  animation: fadeIn 300ms ease-out;
+}

@@ -11,18 +11,15 @@ const images = [
   "/img/2.jpg",
   "/img/3.jpg",
   "/img/6.jpg",
-  "/img/7.jpg",
-  "/img/8.jpg",
-  "/img/9.jpg",
-  "/img/10.jpg",
+
   "/img/11.jpg",
   "/img/12.jpg",
   "/img/13.jpg",
   "/img/14.jpg",
-  "/img/15.jpg",
+
   "/img/16.jpg",
   // "/img/17.jpg",
-  "/img/18.jpg",
+  // "/img/18.jpg",
   "/img/19.jpg",
   "/img/20.jpg",
   "/img/21.jpg",
@@ -208,7 +205,7 @@ const HeroSection: React.FC = () => {
 
       {/* Hero Title in Bottom-Left with Typewriter Effect */}
       <div className="absolute bottom-8 left-8 z-10">
-        <h1 className="text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-roboto font-extrabold tracking-wider typewriter">
+        <h1 className="text-white text-xl  sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-roboto font-extralight tracking-wider typewriter">
           {currentText}
         </h1>
       </div>
