@@ -28,7 +28,7 @@ const projects: Project[] = [
     id: "2",
     title: "Instituto de Fotografía del Noroeste",
     description:
-      "Intimate portrait series exploring human emotion and identity. Shot using natural light and minimalist compositions to emphasize subject authenticity.",
+      "El Instituto de Fotografía del Noroeste es una institución educativa dedicada a la enseñanza de la fotografía y la astrofotografía. Ofrecemos cursos, talleres y conferencias para todos los niveles, desde principiantes hasta avanzados.",
     imageUrl: "/logos/IFN Logo General.png",
     projectUrl: "https://www.ifntijuana.com/",
     category: "pedagogy",
@@ -42,17 +42,21 @@ const ProjectContent = ({ project }: { project: Project }) => {
       className="flex flex-col md:flex-row items-center gap-12"
     >
       {/* Image */}
-      <div className="w-full md:w-1/2">
-        <div className="aspect-[4/3] relative overflow-hidden transition-opacity duration-300">
+      <div className="w-full md:w-1/2 flex justify-center items-center">
+        <div className="aspect-[4/3] relative overflow-hidden transition-opacity duration-300 flex justify-center items-center">
           <Suspense fallback={<Skeleton className="w-full h-full" />}>
             <Link href={project.projectUrl} target="_blank">
-              <Image
-                src={project.imageUrl}
-                alt={project.title}
-                fill
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
-              />
+              <div className="flex justify-center items-center">
+                <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  width={400}
+                  height={350}
+                  className="transition-transform duration-300 transform hover:scale-105"
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                />
+              </div>
             </Link>
           </Suspense>
         </div>
@@ -88,7 +92,7 @@ const ProjectContent = ({ project }: { project: Project }) => {
   );
 };
 
-const ProjectsSection: React.FC = () => {
+const EducationSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState(
     projects[0].category,
   );
@@ -116,7 +120,7 @@ const ProjectsSection: React.FC = () => {
           </h2>
           <div className="w-24 h-0.5 bg-gray-300 mx-auto mb-4"></div>
           <h3 className="text-4xl font-roboto font-light text-gray-900 uppercase tracking-wider">
-            The Projects
+            Education
           </h3>
         </div>
 
@@ -156,4 +160,4 @@ const ProjectsSection: React.FC = () => {
   );
 };
 
-export default ProjectsSection;
+export default EducationSection;

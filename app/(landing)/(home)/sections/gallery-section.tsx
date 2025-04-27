@@ -39,67 +39,159 @@ const GallerySection: React.FC = () => {
     const sampleItems: GalleryItem[] = [
       {
         id: "1",
-        title: "Lorem ipsum",
+        title: "",
         year: 2019,
         category: "astrophotography",
         imageUrl: "/img/1.jpg",
       },
       {
         id: "2",
-        title: "Lorem ipsum",
+        title: "",
         year: 2019,
         category: "astrophotography",
         imageUrl: "/img/2.jpg",
       },
       {
         id: "3",
-        title: "Stellar Nebula",
+        title: "",
         year: 2020,
         category: "astrophotography",
         imageUrl: "/img/3.jpg",
       },
       {
         id: "4",
-        title: "Portrait Study",
-        year: 2021,
-        category: "astrophotography",
-        imageUrl: "/img/11.jpg",
-      },
-      {
-        id: "5",
-        title: "Mountain Range",
+        title: "",
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/6.jpg",
       },
       {
+        id: "5",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/11.jpg",
+      },
+      {
         id: "6",
-        title: "Mountain Range",
+        title: "",
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/12.jpg",
       },
       {
         id: "7",
-        title: "Mountain Range",
+        title: "",
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/13.jpg",
       },
       {
         id: "8",
-        title: "Mountain Range",
+        title: "",
         year: 2021,
         category: "landscapes",
         imageUrl: "/img/8.jpg",
       },
       {
         id: "9",
-        title: "Mountain Range",
+        title: "",
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/14.jpg",
       },
+      {
+        id: "10",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/16.jpg",
+      },
+      {
+        id: "11",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/19.jpg",
+      },
+      {
+        id: "12",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/20.jpg",
+      },
+      {
+        id: "13",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/21.jpg",
+      },
+      {
+        id: "14",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/22.jpg",
+      },
+      {
+        id: "15",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/23.jpg",
+      },
+      {
+        id: "16",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/24.jpg",
+      },
+      {
+        id: "17",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/33.jpg",
+      },
+      {
+        id: "18",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/34.jpg",
+      },
+      {
+        id: "19",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/35.jpg",
+      },
+      {
+        id: "20",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/36.jpg",
+      },
+      {
+        id: "21",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/37.jpg",
+      },
+      {
+        id: "22",
+        title: "",
+        year: 2021,
+        category: "astrophotography",
+        imageUrl: "/img/38.jpg",
+      },
+
       // Add more items for each category
     ];
     setGalleryItems(sampleItems);
@@ -170,7 +262,7 @@ const GallerySection: React.FC = () => {
                     src={item.imageUrl}
                     alt={item.title}
                     fill
-                    className="object-cover"
+                    className=""
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     placeholder="blur"
                     blurDataURL="data:image/png;base64,..."
@@ -178,7 +270,8 @@ const GallerySection: React.FC = () => {
                 </div>
                 <div className="p-4 bg-white">
                   <p className="font-light text-lg text-gray-700">
-                    {item.title}, {item.year}
+                    {/* {item.title}, */}
+                    {/* {item.year} */}
                   </p>
                 </div>
               </div>
