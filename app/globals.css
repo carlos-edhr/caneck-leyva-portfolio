@@ -684,3 +684,48 @@ section {
   transform: translateY(20px);
   transition: all 300ms ease-in;
 }
+
+.image-container {
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.03);
+}
+
+.group:hover .image-container {
+  transform: scale(1.03);
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
+}
+
+.columns-1 {
+  columns: 1;
+}
+
+@media (min-width: 768px) {
+  .columns-2 {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .columns-3 {
+    columns: 3;
+  }
+}
+
+/* Limit maximum column width for very large screens */
+@media (min-width: 1536px) {
+  .columns-3 {
+    column-width: 500px; /* Adjust based on your image sizes */
+  }
+}
+
+/* Ensure images never exceed their intrinsic resolution */
+.next-image-wrapper {
+  max-width: 100%;
+  height: auto;
+}

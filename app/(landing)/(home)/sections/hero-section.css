@@ -54,3 +54,16 @@
     columns: 3;
   }
 }
+
+/* Limit maximum column width for very large screens */
+@media (min-width: 1536px) {
+  .columns-3 {
+    column-width: 500px; /* Adjust based on your image sizes */
+  }
+}
+
+/* Ensure images never exceed their intrinsic resolution */
+.next-image-wrapper {
+  max-width: 100%;
+  height: auto;
+}

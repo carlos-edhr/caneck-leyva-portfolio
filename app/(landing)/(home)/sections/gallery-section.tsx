@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { GalleryImageView } from "./gallery-image-view";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useGesture } from "@use-gesture/react";
@@ -27,18 +26,16 @@ interface GalleryItem {
   year: number;
   category: GalleryCategory;
   imageUrl: string;
-  aspectRatio: number; // Added aspect ratio property
 }
 
 const GallerySection: React.FC = () => {
   const [activeCategory, setActiveCategory] =
     useState<GalleryCategory>("astrophotography");
-  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
-  const [galleryItems, setGalleryItems] = useState<GalleryItem[]>([]);
-
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [galleryItems, setGalleryItems] = useState<GalleryItem[]>([]);
   const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isImageFullscreen, setIsImageFullscreen] = useState(false);
 
   // Sample data with aspect ratios
   useEffect(() => {
@@ -49,7 +46,6 @@ const GallerySection: React.FC = () => {
         year: 2019,
         category: "astrophotography",
         imageUrl: "/img/1.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "2",
@@ -57,7 +53,6 @@ const GallerySection: React.FC = () => {
         year: 2019,
         category: "astrophotography",
         imageUrl: "/img/2.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "3",
@@ -65,7 +60,6 @@ const GallerySection: React.FC = () => {
         year: 2020,
         category: "astrophotography",
         imageUrl: "/img/3.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "4",
@@ -73,7 +67,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/6.jpg",
-        aspectRatio: 3.5, // Example: 3:2 ratio
       },
       {
         id: "5",
@@ -81,7 +74,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/11.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "6",
@@ -89,7 +81,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/12.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "7",
@@ -97,7 +88,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/13.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "8",
@@ -105,7 +95,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "landscapes",
         imageUrl: "/img/8.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "9",
@@ -113,7 +102,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/14.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "10",
@@ -121,7 +109,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/16.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "11",
@@ -129,7 +116,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/19.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "12",
@@ -137,7 +123,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/20.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "13",
@@ -145,7 +130,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/21.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "14",
@@ -153,7 +137,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/22.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "15",
@@ -161,7 +144,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/23.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "16",
@@ -169,7 +151,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/24.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "17",
@@ -177,7 +158,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/33.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "18",
@@ -185,7 +165,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/34.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "19",
@@ -193,7 +172,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/35.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "20",
@@ -201,7 +179,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/36.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "21",
@@ -209,7 +186,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/37.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       {
         id: "22",
@@ -217,7 +193,6 @@ const GallerySection: React.FC = () => {
         year: 2021,
         category: "astrophotography",
         imageUrl: "/img/38.jpg",
-        aspectRatio: 1.5, // Example: 3:2 ratio
       },
       // Add aspectRatio for all other items...
       // Continue with other items maintaining their actual aspect ratios
@@ -242,6 +217,28 @@ const GallerySection: React.FC = () => {
     setScale(1);
     setPosition({ x: 0, y: 0 });
   };
+
+  const toggleImageFullscreen = () => {
+    setIsImageFullscreen(!isImageFullscreen);
+    if (!isImageFullscreen) resetZoom();
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedImage) {
+        if (e.key === "Escape") {
+          setSelectedImage(null);
+          resetZoom();
+        }
+        if (e.key === "+") setScale((s) => Math.min(s + 0.25, 3));
+        if (e.key === "-") setScale((s) => Math.max(s - 0.25, 1));
+        if (e.key === "0") resetZoom();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImage]);
 
   return (
     <div
@@ -284,7 +281,7 @@ const GallerySection: React.FC = () => {
       </div>
 
       {/* Image Grid */}
-      <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+      <div className="columns-1 md:columns-2 lg:columns-3 lg:mx-32 gap-6 space-y-6">
         {filteredItems.map((item) => (
           <motion.div
             key={item.id}
@@ -292,14 +289,19 @@ const GallerySection: React.FC = () => {
             onClick={() => setSelectedImage(item)}
             layout
           >
-            <Image
+            <img
               src={item.imageUrl}
               alt={item.title}
-              width={800}
-              height={600}
+              // width={1200} // Increased base width
+              // height={800} // Increased base height
               className="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,..."
+              // placeholder="blur"
+              // blurDataURL="data:image/png;base64,..."
+              // quality={90} // Increased quality
+              sizes="(max-width: 640px) 100vw, 
+                     (max-width: 1024px) 50vw, 
+                     (max-width: 1536px) 33vw,
+                     25vw" // Added larger breakpoint
             />
           </motion.div>
         ))}
@@ -316,10 +318,11 @@ const GallerySection: React.FC = () => {
             onClick={() => {
               setSelectedImage(null);
               resetZoom();
+              setIsImageFullscreen(false);
             }}
           >
             <div
-              className="relative max-w-full max-h-full"
+              className={`relative ${isImageFullscreen ? "w-screen h-screen" : "w-full max-w-6xl max-h-screen"}`}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Controls */}
@@ -327,24 +330,42 @@ const GallerySection: React.FC = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => setScale(Math.min(scale + 0.25, 3))}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setScale((s) => Math.min(s + 0.25, 3));
+                  }}
                 >
                   <FiZoomIn className="w-6 h-6" />
                 </Button>
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => setScale(Math.max(scale - 0.25, 1))}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setScale((s) => Math.max(s - 0.25, 1));
+                  }}
                 >
                   <FiZoomOut className="w-6 h-6" />
-                </Button>
-                <Button variant="ghost" size="icon" onClick={resetZoom}>
-                  <FiMaximize2 className="w-6 h-6" />
                 </Button>
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleImageFullscreen();
+                  }}
+                >
+                  {isImageFullscreen ? (
+                    <FiMinimize2 className="w-6 h-6" />
+                  ) : (
+                    <FiMaximize2 className="w-6 h-6" />
+                  )}
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={(e) => {
+                    e.stopPropagation();
                     setSelectedImage(null);
                     resetZoom();
                   }}
@@ -355,21 +376,21 @@ const GallerySection: React.FC = () => {
 
               {/* Image Container */}
               <motion.div
-                className="relative"
-                drag
-                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                className={`relative ${isImageFullscreen ? "h-full w-full" : "aspect-[4/3] md:aspect-video"}`}
                 style={{
                   transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
                   touchAction: "none",
                 }}
+                {...(bind() as any)}
               >
                 <Image
                   src={selectedImage.imageUrl}
                   alt={selectedImage.title}
-                  width={2400}
-                  height={1600}
-                  className="max-w-[90vw] max-h-[90vh] object-contain"
+                  fill
+                  quality={100} // Maximum quality for fullscreen
+                  className="object-contain cursor-grab active:cursor-grabbing"
                   priority
+                  sizes="100vw" // Full viewport width
                 />
               </motion.div>
             </div>
