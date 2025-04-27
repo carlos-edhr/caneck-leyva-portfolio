@@ -17,7 +17,7 @@ export default function Home() {
       <AboutSection />
       <GallerySection />
       <ArtistSection />
-      <CameraSection />
+      {/* <CameraSection /> */}
       <ProjectsSection />
       <Footer />
     </div>

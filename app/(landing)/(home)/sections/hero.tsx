@@ -204,11 +204,11 @@ const HeroSection: React.FC = () => {
       </nav>
 
       {/* Hero Title in Bottom-Left with Typewriter Effect */}
-      <div className="absolute bottom-8 left-8 z-10">
+      {/* <div className="absolute bottom-8 left-8 z-10">
         <h1 className="text-white text-xl  sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-roboto font-extralight tracking-wider typewriter">
           {currentText}
         </h1>
-      </div>
+      </div> */}
 
       {/* Overlay for better text readability - removed opacity-30 */}
       <div className="absolute inset-0   z-0"></div>
