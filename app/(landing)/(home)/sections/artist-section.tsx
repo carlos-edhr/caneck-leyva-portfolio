@@ -47,10 +47,23 @@ export function ArtistSection() {
                   Professional Photographer
                 </h3>
                 <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-200 leading-relaxed">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Molestiae eos quia asperiores cumque beatae, quo, delectus hic
-                  voluptatem deserunt in cum voluptate dolores odio laborum at,
-                  nostrum aspernatur explicabo iusto.
+                  Caneck nació el 26 de Junio de 1991 en Tijuana, Baja
+                  California, México. Hijo de Antonio Leyva y Gloria López,
+                  ambos fotógrafos profesionales, Caneck se convierte en
+                  fotógrafo de segunda generación siguiendo un legado familiar.
+                  <br />
+                  <br />
+                  Es fundador del Instituto de Fotografía del Noroeste (IFN) y
+                  cofundador del Congreso Internacional de Astrofotografía. Su
+                  trabajo ha sido publicado en la revista National Geographic en
+                  Español y actualmente es inspirador de la marca Canon. A su
+                  vez, ha sido conferencista en plataformas como TEDx, Canon
+                  Creators y la Antigua Academia de San Carlos. Caneck es
+                  académico de instituciones como la Universidad Autónoma de
+                  Baja California, Observatorio Centro de Estudios
+                  Cinematográficos y La Caja Galería. Actualmente reside en la
+                  ciudad de Playas de Rosarito en donde desarrolla tanto
+                  proyectos personales como encargos profesionales.
                 </p>
                 <div className="mt-8 md:mt-12 flex justify-start md:justify-center gap-4">
                   <a href="https://www.facebook.com/kane.leyva" target="_blank">

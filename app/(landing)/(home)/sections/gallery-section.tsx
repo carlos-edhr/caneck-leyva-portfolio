@@ -18,7 +18,7 @@ type GalleryCategory =
   | "landscapes"
   | "marketing"
   | "artistic"
-  | "teaching";
+  | "education";
 
 interface GalleryItem {
   id: string;
@@ -264,7 +264,7 @@ const GallerySection: React.FC = () => {
           { id: "landscapes", label: "Landscapes" },
           { id: "marketing", label: "Marketing" },
           { id: "artistic", label: "Artistic" },
-          { id: "teaching", label: "Teaching" },
+          { id: "education", label: "Education" },
         ].map((category) => (
           <button
             key={category.id}

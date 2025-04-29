@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 // import { auth } from "@/auth";
 // import { SessionProvider } from "next-auth/react";
 
