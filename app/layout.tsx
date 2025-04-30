@@ -42,6 +42,7 @@ export default async function RootLayout({
         className={`${roboto.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
     // </SessionProvider>

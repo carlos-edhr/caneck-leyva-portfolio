@@ -159,12 +159,13 @@ const EmailsTable = () => {
   );
 
   return (
-    <div className="bg-stone-800 p-6 rounded-lg shadow-sm border border-slate-700 mb-8">
+    <div className="bg-stone-100/50 text-slate-950 p-6 rounded-md shadow-sm border border-slate-900 mb-8">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold">Emails enviados</h2>
         <Button
           //   onClick={handleAddProduct}
-          className="bg-slate-700 hover:bg-slate-600 text-slate-300"
+          type="submit"
+          className="gap-2"
         >
           <PlusIcon className="mr-2 h-4 w-4" />
           Nuevo email
@@ -217,7 +218,7 @@ const EmailsTable = () => {
             <PaginationItem>
               <PaginationPrevious
                 href="#"
-                className="text-slate-300 hover:bg-slate-700"
+                className="text-slate-900 hover:bg-primary/50"
                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                   e.preventDefault();
                   setCurrentPage(Math.max(1, currentPage - 1));
@@ -231,8 +232,8 @@ const EmailsTable = () => {
                   href="#"
                   className={`${
                     currentPage === i + 1
-                      ? "bg-slate-700 text-slate-300"
-                      : "hover:bg-slate-700 text-slate-400"
+                      ? "bg-slate-900/50 hover:bg-slate-950/50 text-slate-900"
+                      : "hover:bg-slate-950/50 text-slate-900"
                   }`}
                   onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                     e.preventDefault();
@@ -247,7 +248,7 @@ const EmailsTable = () => {
             <PaginationItem>
               <PaginationNext
                 href="#"
-                className="text-slate-300 hover:bg-slate-700"
+                className="text-slate-900 hover:bg-primary/50"
                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                   e.preventDefault();
                   setCurrentPage(Math.min(totalPages, currentPage + 1));

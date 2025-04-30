@@ -46,7 +46,7 @@ export function ArtistSection() {
                 <h3 className="mt-1 md:mt-2 text-base md:text-lg font-extralight uppercase text-gray-300">
                   Professional Photographer
                 </h3>
-                <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-200 leading-relaxed">
+                <p className="mt-4 md:mt-6 text-justify text-sm md:text-base text-gray-200 leading-relaxed">
                   Caneck nació el 26 de Junio de 1991 en Tijuana, Baja
                   California, México. Hijo de Antonio Leyva y Gloria López,
                   ambos fotógrafos profesionales, Caneck se convierte en

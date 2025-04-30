@@ -6,7 +6,7 @@ import GallerySection from "./sections/gallery-section";
 import HeroSection from "./sections/hero";
 import Navbar from "./sections/navbar";
 import CameraSection from "./sections/camera-section";
-import EducationSection from "./sections/projects-section";
+import EducationSection from "./sections/education-section";
 import LogosCollaboration from "./sections/logos-collaboration";
 
 export default function Home() {

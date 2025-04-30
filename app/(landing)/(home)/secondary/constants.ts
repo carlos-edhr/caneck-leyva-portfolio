@@ -14,8 +14,8 @@ const navLinks = [
     link: "#artist",
   },
   {
-    name: "The Projects",
-    link: "#projects",
+    name: "The Education",
+    link: "#education",
   },
 ];
 

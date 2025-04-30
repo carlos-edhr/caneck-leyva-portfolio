@@ -63,7 +63,7 @@ const ProjectContent = ({ project }: { project: Project }) => {
       </div>
 
       {/* Text Content */}
-      <div className="w-full md:w-1/2 space-y-6">
+      <div className="w-full md:w-1/2 space-y-6 text-justify">
         <Suspense fallback={<Skeleton className="h-8 w-3/4" />}>
           <h4 className="text-2xl font-light text-gray-800 tracking-wider">
             {project.title}

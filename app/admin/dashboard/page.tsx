@@ -14,6 +14,8 @@ import {
 import ProductTable from "../_components/product-table";
 // import AnalyticsDashboard from "../_components/analytics-section";
 import { Separator } from "@/components/ui/separator";
+import GalleryTable from "../_components/gallery-table";
+import LandingPageControls from "../_components/landing-page-controls";
 
 // Dynamically import the chart component with SSR disabled
 // const PaymentsChart = dynamic(
@@ -67,7 +69,8 @@ const AdminDashboard = () => {
       />
       {/* MAIN DASHBOARD SECTION HERE */}
       {/* TABLA */}
-      <ProductTable />
+      {/* <ProductTable /> */}
+      <GalleryTable />
       {/* <Separator className="w-full h-[1px] m-7 bg-slate-800 mt-8" /> */}
       {/* Payments Overview Section */}
       {/* <div className="bg-stone-800 p-6 rounded-lg shadow-sm border border-slate-700 mb-12">
@@ -85,6 +88,7 @@ const AdminDashboard = () => {
       {/* <Separator className="w-full h-[1px] m-7 bg-slate-800 mt-8" /> */}
       {/* // Add this section after your metrics cards */}
       <Separator className="w-full h-[1px] m-7 bg-slate-800 mt-8" />
+      <LandingPageControls />
       {/* <AnalyticsDashboard /> */}
       <Separator className="w-full h-[1px] m-7 bg-slate-800 mt-8" />
 

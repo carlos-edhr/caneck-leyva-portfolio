@@ -304,23 +304,14 @@ const LatestMasterpieces: React.FC = () => {
               <h4 className="text-2xl font-light text-gray-800 tracking-wider">
                 New Releases
               </h4>
-              <p className="text-gray-600 leading-relaxed tracking-wide">
+              <p className="text-gray-600 leading-relaxed tracking-wide text-justify">
                 Explore the celestial wonders and earthly beauty through the
-                lens of
-                <br />
-                acclaimed photographer Caneck Leyva. Specializing in
-                astrophotography
-                <br />
-                while mastering portrait, landscape, and fine art photography,
-                each
-                <br />
-                limited edition print reveals the universe's grandeur with
-                scientific
-                <br />
-                precision and artistic vision. As a university instructor,
-                Leyva's work
-                <br />
-                bridges academic insight with breathtaking visual storytelling.
+                lens of acclaimed photographer Caneck Leyva. Specializing in
+                astrophotography while mastering portrait, landscape, and fine
+                art photography, each limited edition print reveals the
+                universe's grandeur with scientific precision and artistic
+                vision. As a university instructor, Leyva's work bridges
+                academic insight with breathtaking visual storytelling.
               </p>
               <button
                 onClick={() => openModal(0)}

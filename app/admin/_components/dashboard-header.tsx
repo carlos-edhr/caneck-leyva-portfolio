@@ -11,7 +11,7 @@ const DashboardHeader = ({
   subtitle,
 }: DashboardHeaderProps) => {
   return (
-    <header className="font-roboto font-extralight container mx-auto px-4 py-8 md:py-12">
+    <header className="font-roboto font-extralight container mx-auto px-4 py-8 md:py-12 text-slate-950">
       <div className="flex flex-col items-center space-y-4 text-center">
         {/* <Separator className="w-full h-[1px] bg-slate-950" /> */}
         <div className="flex items-center w-full max-w-2xl">

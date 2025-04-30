@@ -40,10 +40,10 @@ const Options = () => {
 
   const menuItems = [
     { name: "Dashboard", href: "/admin/dashboard", icon: <LucideBarChart3 /> },
-    { name: "Events", href: "/admin/eventos", icon: <NotebookPen /> },
+    // { name: "Events", href: "/admin/eventos", icon: <NotebookPen /> },
     { name: "Emails", href: "/admin/emails", icon: <Inbox /> },
-    { name: "Ventas", href: "/admin/ventas", icon: <DollarSign /> },
-    { name: "Usuarios", href: "/admin/users", icon: <Users /> },
+    { name: "Sales", href: "/admin/ventas", icon: <DollarSign /> },
+    // { name: "Usuarios", href: "/admin/users", icon: <Users /> },
   ];
 
   if (!collapsed) {
@@ -51,9 +51,7 @@ const Options = () => {
       <div className="h-screen lg:w-60 text-slate-900 px-5 pb-4 flex flex-col overflow-y-scroll">
         {/* <Toggle /> */}
         <div>
-          <div className="text-lg font-semibold mb-5">
-            Panel del administrador
-          </div>
+          <div className="text-lg font-semibold mb-5">Admin panel</div>
 
           {/* Main menu */}
           <ul className="space-y-4">

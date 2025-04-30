@@ -281,7 +281,7 @@ const GallerySection: React.FC = () => {
       </div>
 
       {/* Image Grid */}
-      <div className="columns-1 md:columns-2 lg:columns-3 lg:mx-32 gap-6 space-y-6">
+      <div className="sm:columns-1 md:columns-3 lg:columns-3 lg:mx-32 gap-6 space-y-6">
         {filteredItems.map((item) => (
           <motion.div
             key={item.id}
@@ -294,7 +294,7 @@ const GallerySection: React.FC = () => {
               alt={item.title}
               // width={1200} // Increased base width
               // height={800} // Increased base height
-              className="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="w-full h-auto  shadow-lg hover:shadow-xl transition-shadow"
               // placeholder="blur"
               // blurDataURL="data:image/png;base64,..."
               // quality={90} // Increased quality
