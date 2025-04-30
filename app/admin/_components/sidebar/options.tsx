@@ -42,7 +42,7 @@ const Options = () => {
     { name: "Dashboard", href: "/admin/dashboard", icon: <LucideBarChart3 /> },
     // { name: "Events", href: "/admin/eventos", icon: <NotebookPen /> },
     { name: "Emails", href: "/admin/emails", icon: <Inbox /> },
-    { name: "Sales", href: "/admin/ventas", icon: <DollarSign /> },
+    { name: "Sales", href: "/admin/sales", icon: <DollarSign /> },
     // { name: "Usuarios", href: "/admin/users", icon: <Users /> },
   ];
 
