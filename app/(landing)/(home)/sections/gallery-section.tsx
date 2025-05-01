@@ -45,154 +45,176 @@ const GallerySection: React.FC = () => {
         title: "",
         year: 2019,
         category: "astrophotography",
-        imageUrl: "/img/1.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//1.jpg",
       },
       {
         id: "2",
         title: "",
         year: 2019,
         category: "astrophotography",
-        imageUrl: "/img/2.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//2.jpg",
       },
       {
         id: "3",
         title: "",
         year: 2020,
         category: "astrophotography",
-        imageUrl: "/img/3.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//3.jpg",
       },
       {
         id: "4",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/6.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//6.jpg",
       },
       {
         id: "5",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/11.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//11.jpg",
       },
       {
         id: "6",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/12.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//12.jpg",
       },
       {
         id: "7",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/13.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//13.jpg",
       },
       {
         id: "8",
         title: "",
         year: 2021,
         category: "landscapes",
-        imageUrl: "/img/8.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//8.jpg",
       },
       {
         id: "9",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/14.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//14.jpg",
       },
       {
         id: "10",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/16.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//16.jpg",
       },
       {
         id: "11",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/19.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//19.jpg",
       },
       {
         id: "12",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/20.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//20.jpg",
       },
       {
         id: "13",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/21.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//21.jpg",
       },
       {
         id: "14",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/22.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//22.jpg",
       },
       {
         id: "15",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/23.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//23.jpg",
       },
       {
         id: "16",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/24.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//24.jpg",
       },
       {
         id: "17",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/33.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//33.jpg",
       },
       {
         id: "18",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/34.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//34.jpg",
       },
       {
         id: "19",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/35.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//35.jpg",
       },
       {
         id: "20",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/36.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//36.jpg",
       },
       {
         id: "21",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/37.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//37.jpg",
       },
       {
         id: "22",
         title: "",
         year: 2021,
         category: "astrophotography",
-        imageUrl: "/img/38.jpg",
+        imageUrl:
+          "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//38.jpg",
       },
       // Add aspectRatio for all other items...
       // Continue with other items maintaining their actual aspect ratios

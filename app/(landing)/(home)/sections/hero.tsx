@@ -7,26 +7,26 @@ import gsap from "gsap";
 
 // Define an array of background images
 const images = [
-  "/img/1.jpg",
-  "/img/2.jpg",
-  "/img/3.jpg",
-  "/img/6.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//1.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//2.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//3.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//6.jpg",
 
-  "/img/11.jpg",
-  "/img/12.jpg",
-  "/img/13.jpg",
-  "/img/14.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//11.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//12.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//13.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//14.jpg",
 
-  "/img/16.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//16.jpg",
   // "/img/17.jpg",
   // "/img/18.jpg",
-  "/img/19.jpg",
-  "/img/20.jpg",
-  "/img/21.jpg",
-  "/img/22.jpg",
-  "/img/23.jpg",
-  "/img/24.jpg",
-  "/img/33.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//19.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//20.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//21.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//22.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//23.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//24.jpg",
+  "https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//33.jpg",
 ];
 
 // Define an array of hero titles

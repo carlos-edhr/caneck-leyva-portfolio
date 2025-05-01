@@ -91,6 +91,14 @@ const AdminDashboard = () => {
       <LandingPageControls />
       {/* <AnalyticsDashboard /> */}
       <Separator className="w-full h-[1px] m-7 bg-slate-800 mt-8" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <img src="https://ttwxbitlxritmxvslrik.supabase.co/storage/v1/object/public/portfolio-gallery//20.jpg" />
+        <img src="/img/3.jpg" />
+        <img src="/img/6.jpg" />
+        <img src="/img/12.jpg" />
+        <img src="/img/13.jpg" />
+        <img src="/img/8.jpg" />
+      </div>
 
       <DashboardFooter />
     </div>
