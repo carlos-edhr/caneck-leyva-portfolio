@@ -5,6 +5,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 // import { auth } from "@/auth";
 // import { SessionProvider } from "next-auth/react";
+import { Toaster } from "sonner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,6 +44,7 @@ export default async function RootLayout({
       >
         {children}
         <Analytics />
+        <Toaster position="bottom-right" theme="dark" expand />
       </body>
     </html>
     // </SessionProvider>

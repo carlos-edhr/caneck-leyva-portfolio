@@ -17,6 +17,10 @@ const navLinks = [
     name: "The Education",
     link: "#education",
   },
+  {
+    name: "Contact",
+    link: "#contact",
+  },
 ];
 
 const words = [

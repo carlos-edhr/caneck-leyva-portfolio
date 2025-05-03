@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGesture } from "@use-gesture/react";
 import { FiMaximize2, FiMinimize2, FiZoomIn, FiZoomOut } from "react-icons/fi";
+import Link from "next/link";
 interface GalleryImage {
   id: number;
   src: string;
@@ -313,12 +314,21 @@ const LatestMasterpieces: React.FC = () => {
                 vision. As a university instructor, Leyva's work bridges
                 academic insight with breathtaking visual storytelling.
               </p>
-              <button
-                onClick={() => openModal(0)}
-                className="mt-6 px-8 py-3 border border-gray-800 text-gray-800 uppercase tracking-wider hover:bg-gray-800 hover:text-white transition-colors duration-300"
-              >
-                Explore New Arrivals
-              </button>
+              <div className="flex flex-col gap-4 w-full">
+                <div className="flex flex-col w-full">
+                  <button
+                    onClick={() => openModal(0)}
+                    className="px-8 py-3 border border-gray-800 text-gray-800 uppercase tracking-wider hover:bg-gray-800 hover:text-white transition-colors duration-300"
+                  >
+                    Explore New Arrivals
+                  </button>
+                </div>
+                <Link className="flex flex-col w-full" href={"/#contact"}>
+                  <button className="px-8 py-3 border border-gray-800 text-gray-800 uppercase tracking-wider hover:bg-gray-800 hover:text-white transition-colors duration-300">
+                    Work with Caneck Leyva
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

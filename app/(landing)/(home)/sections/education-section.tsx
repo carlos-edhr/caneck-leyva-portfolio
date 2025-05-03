@@ -111,7 +111,7 @@ const EducationSection: React.FC = () => {
     projects.find((p) => p.category === selectedCategory) || projects[0];
 
   return (
-    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <section id="education" className="bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

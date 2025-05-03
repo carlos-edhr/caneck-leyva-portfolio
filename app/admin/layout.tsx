@@ -12,8 +12,9 @@ import DashboardFooter from "./_components/dashboard-footer";
 //   children: React.ReactNode;
 // }
 
-const BrowseLayout = async () =>
+const BrowseLayout = () =>
   // { params, children }: BrowseLayoutProps
+
   {
     // try {
     //   const self = await currentUser();
@@ -23,14 +24,14 @@ const BrowseLayout = async () =>
 
     return (
       <>
-        {/* <Navbar />
-      <div className="flex h-full pt-20 bg-white">
-        <Suspense fallback={<SidebarSkeleton />}>
+        <Navbar />
+        <div className="flex h-full pt-20 bg-white">
+          {/* <Suspense fallback={<SidebarSkeleton />}>
           <Sidebar />
-        </Suspense>
-
-        <Container>{children}</Container>
-      </div> */}
+        </Suspense> */}
+          {/* 
+        <Container>{children}</Container> */}
+        </div>
       </>
     );
   };
